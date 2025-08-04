@@ -1,4 +1,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<!-- Permisos para externo (WhatsApp) -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+<!-- Permisos para externo (si es necesario) -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+<!-- Permisos para acceder a Internet (necesario para Firebase) -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:label="app_delivery_express"
         android:name="${applicationName}"
@@ -40,6 +48,14 @@
         <intent>
             <action android:name="android.intent.action.PROCESS_TEXT"/>
             <data android:mimeType="text/plain"/>
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <data android:scheme="https" />
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <data android:scheme="whatsapp" />
         </intent>
     </queries>
 </manifest>

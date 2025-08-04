@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import 'package:app_delivery_express/configs/themes/app_themes.dart';
 import 'package:app_delivery_express/presentation/screens/home_native_screen/components/search_components.dart';
 import 'package:app_delivery_express/presentation/screens/home_native_screen/controllers/home_native_controller.dart';
 import 'package:app_delivery_express/presentation/screens/home_native_screen/widgets/lista_negocios_widget.dart';

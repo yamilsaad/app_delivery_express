@@ -36,21 +36,32 @@ class CartController extends GetxController {
 
   // Método para enviar el pedido por WhatsApp
   void sendOrderViaWhatsApp() async {
-    final phoneNumber = menuController.negocio.phoneNumber;
-    final message = menuController.getWhatsAppMessage();
+    try {
+      final phoneNumber = menuController.negocio.phoneNumber;
+      final message = menuController.getWhatsAppMessage();
 
-    final whatsappUrl =
-        'whatsapp://send?phone=$phoneNumber&text=${Uri.encodeQueryComponent(message)}';
+      final whatsappUrl =
+          'https://wa.me/$phoneNumber?text=${Uri.encodeQueryComponent(message)}';
 
-    if (await canLaunchUrl(Uri.parse(whatsappUrl))) {
-      await launchUrl(
+      /*final whatsappUrl =
+        'whatsapp://send?phone=$phoneNumber&text=${Uri.encodeQueryComponent(message)}';*/
+      debugPrint('Intentando abrir: $whatsappUrl');
+      if (await canLaunchUrl(Uri.parse(whatsappUrl))) {
+        await launchUrl(
+          Uri.parse(whatsappUrl),
+          mode: LaunchMode.externalNonBrowserApplication, // Alternativa
+        );
+        /*await launchUrl(
         Uri.parse(whatsappUrl),
         mode: LaunchMode.externalApplication,
-      );
-    } else {
+      );*/
+      } else {
+        throw 'No se pudo abrir WhatsApp. ¿Está instalado?';
+      }
+    } catch (e) {
       Get.snackbar(
         'Error',
-        'No se pudo abrir WhatsApp. Asegúrate de tener la aplicación instalada.',
+        e.toString(),
         backgroundColor: Colors.red,
         colorText: Colors.white,
       );

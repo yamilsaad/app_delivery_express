@@ -39,8 +39,9 @@ class HomeNativeController extends GetxController {
     return [
       Negocio(
         id: '1',
-        nombre: 'Pizza Express',
-        imageUrl: 'https://placehold.co/600x400/525252/FFFFFF?text=Pizza',
+        nombre: 'Pizza Regional',
+        imageUrl:
+            'https://irp-cdn.multiscreensite.com/3e655c6a/MOBILE/jpg/1836095-logo-v1.jpg',
         categorias: ['Pizza', 'Italiana'],
         rating: 4.5,
         phoneNumber: '+5492645748636', // Número de prueba
@@ -49,7 +50,7 @@ class HomeNativeController extends GetxController {
         id: '2',
         nombre: 'Hamburguesas del Chef',
         imageUrl:
-            'https://placehold.co/600x400/1E40AF/FFFFFF?text=Hamburguesas',
+            'https://pxcdn.0223.com.ar/f/012025/1736014397200.webp?cw=748&ch=420&cma=1&extw=jpg',
         categorias: ['Hamburguesas', 'Americana'],
         rating: 4.8,
         phoneNumber: '+542645748636', // Número de prueba
@@ -57,7 +58,8 @@ class HomeNativeController extends GetxController {
       Negocio(
         id: '3',
         nombre: 'Tacos Dorados',
-        imageUrl: 'https://placehold.co/600x400/F97316/FFFFFF?text=Tacos',
+        imageUrl:
+            'https://backyardtaco.com/wp-content/uploads/2023/04/BackyardTaco_Are-Tacos-Mexican_Featured.jpg',
         categorias: ['Mexicana', 'Tacos'],
         rating: 4.2,
         phoneNumber: '+542645748636', // Número de prueba
@@ -65,7 +67,8 @@ class HomeNativeController extends GetxController {
       Negocio(
         id: '4',
         nombre: 'Sushi & Roll',
-        imageUrl: 'https://placehold.co/600x400/06B6D4/FFFFFF?text=Sushi',
+        imageUrl:
+            'https://sushibarhospitality.com/wp-content/uploads/2024/07/sushibar-featured-chicago.jpg',
         categorias: ['Japonesa', 'Sushi'],
         rating: 4.9,
         phoneNumber: '+542645748636', // Número de prueba
